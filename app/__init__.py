@@ -3,6 +3,7 @@ from app.config.db import db
 from app.models.funciones_tablas import crear_usuarios, limpiar_tablas
 from app.config.auth import login_manager
 from app.config.routes import registrar_rutas
+from app.models import guarderias, cuidadores, perros
 import atexit
 
 def create_app(config) -> Flask:

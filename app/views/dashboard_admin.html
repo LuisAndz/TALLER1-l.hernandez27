@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Admin</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>
+      Bienvenido {{username}}, estas en el DASHBOARD con permisos de
+      administrador.
+    </h1>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Raza</th>
+          <th>Edad</th>
+          <th>Peso</th>
+          <th>Cuidador</th>
+          <th>Guardería</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for p, cuidador, guarderia in perros %}
+        <tr>
+          <td>{{ p.id }}</td>
+          <td>{{ p.nombre }}</td>
+          <td>{{ p.raza }}</td>
+          <td>{{ p.edad }}</td>
+          <td>{{ p.peso }}</td>
+          <td>{{ cuidador }}</td>
+          <td>{{ guarderia }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <form action="logout">
+      <button>Cerrar sesión</button>
+    </form>
+  </body>
+</html>
