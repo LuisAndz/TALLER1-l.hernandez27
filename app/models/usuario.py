@@ -3,7 +3,7 @@ from app.config.db import db
 
 
 """
-Punto 2 | Clase Usuario
+Parte 1 - Punto 2 | Clase Usuario
 Cree una clase usuario que tenga los atributos id, username y password. 
 Dicha clase se usará para hacer las pruebas. Invéntese 3 usuarios cualquiera 
 y cree instancias de estos.

@@ -19,3 +19,10 @@ def crear_usuarios():
     except Exception as e:
         print(f"Error creando usuarios: {e}")
         db.session.rollback()
+
+
+def limpiar_tablas(app):
+        with app.app_context():
+            db.session.query(Usuario).delete()
+            db.session.commit()
+            print("Tablas limpias")
